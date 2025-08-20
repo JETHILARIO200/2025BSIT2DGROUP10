@@ -7,121 +7,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Parkwhiz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #fff; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 1px solid #eee; }
-        .navbar a { text-decoration: none; color: #222; margin: 0 15px; font-weight: 500; }
-        .navbar .nav-links { display: flex; align-items: center; }
-        .navbar .auth { display: flex; gap: 10px; align-items: center; }
-        .navbar .btn { background: #222; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; }
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .contact-title { text-align: center; font-size: 2.2rem; margin-top: 30px; margin-bottom: 10px; }
-        .contact-desc { text-align: center; color: #444; margin-bottom: 40px; }
-        .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; }
-        .contact-form { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .contact-form label { display: block; margin-bottom: 8px; font-weight: 500; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 18px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
-        .contact-form textarea { min-height: 80px; resize: vertical; }
-        .contact-form button { width: 100%; background: #222; color: #fff; border: none; padding: 12px; border-radius: 6px; font-size: 1.1rem; cursor: pointer; margin-top: 10px; }
-        .contact-info { background: #fafafa; border-radius: 12px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); margin-bottom: 24px; }
-        .contact-info h3 { margin-top: 0; margin-bottom: 18px; }
-        .contact-info p { margin: 8px 0; color: #333; }
-        .contact-info .icon { margin-right: 8px; }
-        .faq { background: #fafafa; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .faq h4 { margin-top: 0; margin-bottom: 12px; }
-        .faq p { margin: 8px 0; color: #333; font-size: 0.98rem; }
-        .footer { background: #222; color: #fff; text-align: center; padding: 32px 0 12px 0; font-size: 0.95rem; margin-top: 60px; }
-        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .footer-col { flex: 1 1 180px; margin-bottom: 18px; }
-        .footer-col h5 { color: #fff; margin-bottom: 10px; }
-        .footer-col ul { list-style: none; padding: 0; margin: 0; }
-        .footer-col ul li { margin-bottom: 8px; }
-        .footer-col ul li a { color: #bbb; text-decoration: none; font-size: 0.98rem; }
-        .footer-col ul li a:hover { color: #fff; }
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 16px 0 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .contact-desc {
+            text-align: center;
+            color: #444;
+            margin-bottom: 32px;
+        }
+        .contact-main {
+            display: flex;
+            gap: 48px;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .contact-form {
+            flex: 1 1 340px;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #fafafa;
+        }
+        .contact-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 1.08rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        .contact-info {
+            flex: 1 1 340px;
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .info-card {
+            background: #fafafa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 24px 20px;
+            margin-bottom: 0;
+        }
+        .info-card h3 {
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #222;
+            font-size: 1rem;
+        }
+        .info-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .info-list li i {
+            margin-right: 8px;
+            color: #222;
+        }
+        .faq-card {
+            background: #fafafa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 20px 18px;
+        }
+        .faq-card h3 {
+            font-size: 1.08rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        .faq-a {
+            color: #444;
+            margin-bottom: 12px;
+        }
         @media (max-width: 900px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .footer-grid { flex-direction: column; }
+            .contact-main {
+                flex-direction: column;
+                gap: 32px;
+                align-items: center;
+            }
+            .contact-info {
+                max-width: 100%;
+            }
+        }
+        .footer {
+            background: #181c23;
+            color: #fff;
+            padding: 40px 0 0 0;
+            margin-top: 64px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            justify-content: space-between;
+            padding: 0 16px;
+        }
+        .footer-section {
+            flex: 1 1 180px;
+            min-width: 160px;
+            margin-bottom: 24px;
+        }
+        .footer-section h4 {
+            font-size: 1.08rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 8px;
+            color: #ccc;
+            font-size: 0.98rem;
+        }
+        .footer-bottom {
+            text-align: center;
+            color: #aaa;
+            font-size: 0.95rem;
+            padding: 18px 0 12px 0;
+            border-top: 1px solid #222;
+            margin-top: 24px;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div><a href="index.php"><strong>Parkwhiz</strong></a></div>
-        <div class="nav-links">
-            <a href="index.php">Home</a>
-            <a href="feature.php">Features</a>
-            <a href="index.php#how">How It Works</a>
-            <a href="#pricing">Pricing</a>
-            <a href="contact.php">Contact</a>
-        </div>
-        <div class="auth">
-            <a href="#login">Login</a>
-            <button class="btn">Sign Up</button>
-        </div>
-    </nav>
-    <div class="container">
+    <?php include 'nav.php'; ?>
+    <div class="contact-container">
         <div class="contact-title">Contact Us</div>
         <div class="contact-desc">Get in touch with our team. We're here to help you with any questions.</div>
-        <div class="contact-grid">
+        <div class="contact-main">
             <form class="contact-form">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="How can we help?">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us more about your inquiry..."></textarea>
+                <input type="text" placeholder="Your full name" required>
+                <input type="email" placeholder="you@example.com" required>
+                <input type="text" placeholder="How can we help?" required>
+                <textarea placeholder="Tell us more about your inquiry..." required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-            <div>
-                <div class="contact-info">
+            <div class="contact-info">
+                <div class="info-card">
                     <h3>Get in Touch</h3>
-                    <p><span class="icon">&#9993;</span> <strong>Email</strong><br>support@parkwhiz.com</p>
-                    <p><span class="icon">&#9742;</span> <strong>Phone</strong><br>+1 (555) 123-4567</p>
-                    <p><span class="icon">&#127968;</span> <strong>Address</strong><br>1234 Parking Ave<br>Suite 100 Cityville,<br>State 12345</p>
-                    <p><span class="icon">&#128337;</span> <strong>Business Hours</strong><br>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                    <ul class="info-list">
+                        <li><i class="fa fa-envelope"></i> Email<br>support@parkwhiz.com</li>
+                        <li><i class="fa fa-phone"></i> Phone<br>+1 (555) 123-4567</li>
+                        <li><i class="fa fa-map-marker"></i> Address<br>1234 Parking Ave<br>Suite 100 Cityville,<br>State 12345</li>
+                        <li><i class="fa fa-clock-o"></i> Business Hours<br>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</li>
+                    </ul>
                 </div>
-                <div class="faq">
-                    <h4>Frequently Asked Questions</h4>
-                    <p><strong>How quickly do you respond to inquiries?</strong><br>We typically respond within 24 hours during business days.</p>
-                    <p><strong>Do you offer phone support?</strong><br>Yes, phone support is available during business hours.</p>
+                <div class="faq-card">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-q">How quickly do you respond to inquiries?</div>
+                    <div class="faq-a">We typically respond within 24 hours during business days.</div>
+                    <div class="faq-q">Do you offer phone support?</div>
+                    <div class="faq-a">Yes, phone support is available during business hours.</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h5>Parkwhiz</h5>
-                <p>Making parking simple and convenient for everyone.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Parkwhiz</h4>
+                <div style="color:#ccc; font-size:0.98rem;">Making parking simple and convenient for everyone.</div>
             </div>
-            <div class="footer-col">
-                <h5>Product</h5>
+            <div class="footer-section">
+                <h4>Product</h4>
                 <ul>
-                    <li><a href="feature.php">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#how">How It Works</a></li>
+                    <li>Features</li>
+                    <li>Pricing</li>
+                    <li>How It Works</li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h5>Company</h5>
+            <div class="footer-section">
+                <h4>Company</h4>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li>About</li>
+                    <li>Contact</li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h5>Support</h5>
+            <div class="footer-section">
+                <h4>Support</h4>
                 <ul>
-                    <li><a href="#help">Help Center</a></li>
-                    <li><a href="#privacy">Privacy Policy</a></li>
-                    <li><a href="#terms">Terms of Service</a></li>
+                    <li>Help Center</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
                 </ul>
             </div>
         </div>
-        <div style="margin-top:18px; color:#bbb; font-size:0.97rem;">&copy; 2025 Parkwhiz. All rights reserved.</div>
-    </div>
+        <div class="footer-bottom">
+            &copy; 2025 Parkwhiz. All rights reserved.
+        </div>
+    </footer>
 </body>
 </html>
