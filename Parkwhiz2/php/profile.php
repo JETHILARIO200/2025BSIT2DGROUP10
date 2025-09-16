@@ -1,3 +1,4 @@
+
 <?php
 // profile.php for Parkwhiz2
 ?>
@@ -15,7 +16,7 @@
     <div class="profile-header">
         <div class="profile-header-inner">
             <div class="profile-header-left">
-                <img src="../images/logo.png" alt="Parkwhiz Logo">
+                <img src="/Parkwhiz2/images/parklogo.png" alt="Parkwhiz Logo">
                 <span>Parkwhiz</span>
             </div>
             <div class="profile-header-right">
