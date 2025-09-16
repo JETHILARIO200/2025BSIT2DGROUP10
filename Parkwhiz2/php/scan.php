@@ -1,5 +1,6 @@
 
 
+
 <?php // scan.php for Parkwhiz2 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    
     <div style="background:#181c22; color:#fff; padding:0; margin:0; width:100%;">
         <div style="display:flex; align-items:center; justify-content:space-between; height:55px; padding:0 32px;">
             <div style="display:flex; align-items:center;">
-                <img src="../images/logo.png" alt="Parkwhiz Logo" style="height:32px;width:auto;vertical-align:middle;margin-right:8px;">
+              <img src="/Parkwhiz2/images/parklogo.png" alt="dashboard.php" alt="Parkwhiz Logo" style="height: 40px;width:auto;vertical-align:middle;margin: left 20px;">
                 <span style="font-size:1.15rem; font-weight:500; color:#fff;">Parkwhiz</span>
             </div>
             <div style="display:flex; align-items:center; gap:18px;">
