@@ -1,17 +1,16 @@
+
 <?php
 // ==== Visitor Counter ====
 $counterFile = "php/counter.txt";
 
-// Kung wala pa yung file, gagawa
+
 if (!file_exists($counterFile)) {
     file_put_contents($counterFile, "0");
 }
 
-// Basahin yung kasalukuyang bilang
 $visits = (int) file_get_contents($counterFile);
 $visits++;
 
-// I-save yung updated na bilang
 file_put_contents($counterFile, $visits);
 ?>
 <!DOCTYPE html>
@@ -85,7 +84,7 @@ file_put_contents($counterFile, $visits);
         <p><strong>Visitor Count:</strong> <?php echo $visits; ?></p>
     </section>
 
-    <section style="height: 40px; background: #f7f7f7; border: none;"></section>
+    <section style="height: 40px; border: none;"></section>
     <section class="how-it-works" id="how">
         <h2>How It Works</h2>
         <p>Discover how Parkwhiz transforms parking with smart technology.</p>
@@ -109,16 +108,7 @@ file_put_contents($counterFile, $visits);
         </div>
     </div>
 
-    <!-- Contact Form -->
-    <section id="contact">
-        <h2 style="text-align:center;">Contact Us</h2>
-        <form id="contactForm" method="POST" action="php/process_form.php">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+   
 
     <footer style="background:#181c22; color:#cbd5e1; text-align:center; font-size:1.05rem; padding:18px 0 12px 0; border-top:1px solid #334155; margin-top:18px;">
         &copy; 2025 Parkwhiz. All rights reserved.
