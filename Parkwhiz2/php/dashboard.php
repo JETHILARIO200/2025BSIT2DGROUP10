@@ -1,3 +1,4 @@
+
 <?php
 // dashboard.php for Parkwhiz2
 ?>
@@ -326,7 +327,7 @@
 </head>
 <body>
     <div class="dashboard-header">
-        <img src="../images/logo.png" alt="Parkwhiz Logo" class="logo-img">
+        <img src="../images/parklogo.png" alt="Parkwhiz Logo" class="logo-img">
         <span class="logo">Parkwhiz</span>
         <div class="user">
             <span><i class="fa fa-bell"></i></span>
@@ -356,7 +357,7 @@
                 <span class="stat-icon" style="color:#222;">&#128663;</span>
             </div>
         </div>
-        <div class="dashboard-actions" style="display:flex;gap:24px;margin:0 0 24px 32px;">
+        <div class="dashboard-actions" style="display:fle;gap:24px;margin:0 0 24px 0;justify-content:center;flex-wrap:wrap;">
             <a href="reserve.php" style="background:#181818;color:#fff;text-decoration:none;font-size:1.08rem;font-weight:500;border-radius:10px;padding:14px 0;width:220px;text-align:center;box-sizing:border-box;display:inline-block;">Reserved Slot</a>
             <button type="button" style="background:#fff;color:#222;border:1px solid #eee;border-radius:10px;padding:14px 0;width:220px;font-size:1.08rem;font-weight:500;" onclick="window.location.href='scan.php'">Scan Plate</button>
             <button type="button" style="background:#fff;color:#222;border:1px solid #eee;border-radius:10px;padding:14px 0;width:220px;font-size:1.08rem;font-weight:500;" onclick="window.location.href='slots.php'">View My Slots</button>
@@ -366,7 +367,7 @@
             <span class="dashboard-tag vip">VIP</span>
             <span class="dashboard-tag admin">Admin-Only</span>
         </div>
-        <div style="display:flex; gap:12px; margin:0 32px 18px 32px; justify-content:flex-end;">
+        <div style="display:flex; gap:12px; margin:0 32px 18px 32px; justify-content:center;"> 
             <button id="mapBtn" style="background:#222;color:#fff;border:none;border-radius:8px;padding:8px 24px;font-size:1rem;cursor:pointer;" onclick="showMap()">Map</button>
             <button id="listBtn" style="background:#fff;color:#222;border:1px solid #eee;border-radius:8px;padding:8px 24px;font-size:1rem;cursor:pointer;" onclick="showList()">List</button>
         </div>
