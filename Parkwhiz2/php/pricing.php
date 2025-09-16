@@ -1,3 +1,4 @@
+
 <?php
 // pricing.php - Parkwhiz Pricing Page
 ?>
@@ -78,7 +79,7 @@
         <div class="pricing-cards">
             <div class="pricing-card">
                 <h3>FREE PLAN</h3>
-                <div class="price">$0 <span class="per">/mo</span></div>
+                <div class="price">P <span class="per">/mo</span></div>
                 <ul>
                     <main class="main-content">
                     <li>Mobile app booking</li>
@@ -91,7 +92,7 @@
             </div>
             <div class="pricing-card">
                 <h3>MEMBER</h3>
-                <div class="price">$10 <span class="per">/mo</span></div>
+                <div class="price">P10 <span class="per">/mo</span></div>
                 <ul>
                     <li>Everything in Free</li>
                     <li>Faster booking confirmations</li>
@@ -103,7 +104,7 @@
             </div>
             <div class="pricing-card vip">
                 <h3>VIP</h3>
-                <div class="price">$30 <span class="per">/mo</span></div>
+                <div class="price">P300 <span class="per">/mo</span></div>
                 <ul>
                     <li>Everything in Member</li>
                     <li>Reserved VIP-only spots</li>
@@ -115,7 +116,7 @@
             </div>
             <div class="pricing-card">
                 <h3>PREMIUM</h3>
-                <div class="price">$50 <span class="per">/mo</span></div>
+                <div class="price">P500 <span class="per">/mo</span></div>
                 <ul>
                     <li>Everything in VIP</li>
                     <li>Multiple users</li>
