@@ -1,3 +1,4 @@
+
 // Parkwhiz Main JavaScript
 function openDrawer() {
     document.getElementById('drawer').classList.add('active');
