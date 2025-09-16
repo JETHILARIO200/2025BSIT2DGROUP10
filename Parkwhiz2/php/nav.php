@@ -1,6 +1,7 @@
+
 <nav class="navbar">
     <div class="navbar-section left">
-    <img src="/Parkwhiz2/images/logo.png" alt="Parkwhiz Logo" class="logo-img" style="height:32px;width:auto;vertical-align:middle;margin-right:8px;">
+    <img src="/Parkwhiz2/images/parklogo.png" alt="Parkwhiz Logo" class="logo-img" style="height:32px;width:auto;vertical-align:middle;margin-right:8px;">
     <span class="logo">Parkwhiz</span>
         <div class="hamburger" onclick="openDrawer()">
             <span></span>
@@ -30,3 +31,9 @@
     <a href="/Parkwhiz2/php/contact.php" onclick="closeDrawer()">Contact</a>
     <a href="/Parkwhiz2/php/login.php" onclick="closeDrawer()">Login</a>
 </div>
+<nav class="bottom-nav">
+  <a href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-car"></i></a>
+  <a href="#"><i class="fa fa-user"></i></a>
+</nav>
+
