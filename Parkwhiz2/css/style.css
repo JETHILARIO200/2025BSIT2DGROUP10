@@ -1,3 +1,4 @@
+
 /* Parkwhiz Main Stylesheet */
 /* Mobile Contact Page & Footer Enhancements */
 @media (max-width: 900px) {
@@ -440,8 +441,8 @@ body {
     padding: 16px 32px 0 32px;
 }
 .dashboard-header .logo-img {
-    height: 40px;
-    margin-right: 12px;
+    height: 70px;
+    margin-right: 20px;
 }
 .dashboard-header .logo {
     font-size: 1.3rem;
@@ -460,7 +461,7 @@ body {
     border-radius: 50%;
 }
 .dashboard-stats {
-    display: flex;
+    display: center;
     gap: 32px;
     justify-content: flex-start;
     margin: 32px 0 24px 32px;
@@ -492,7 +493,7 @@ body {
     margin-left: 8px;
 }
 .dashboard-actions {
-    display: flex;
+    display: flex]]];
     gap: 24px;
     margin: 0 0 24px 32px;
 }
@@ -1222,4 +1223,88 @@ body {
 }
 .slots-footer-links a:hover {
     text-decoration: underline;
+}
+
+/*DARKMODE*/
+.toggle-btn {
+    position: fixed;
+    bottom: 20px;   
+    right: 20px;    
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #334155;
+    color: #fff;
+    z-index: 10001; /* Increased z-index */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25); /* Add shadow for visibility */
+}
+.toggle-btn:hover {
+    background: #2563eb;
+}
+
+
+html {
+    overflow-y: scroll;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #181c22;
+  color: #fff;
+  height: 56px;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-img {
+  height: 40px;
+}
+.app-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.app-header-icons i {
+  font-size: 1.3rem;
+  margin-left: 18px;
+  cursor: pointer;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: #181c22;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 56px;
+  z-index: 100;
+}
+.bottom-nav a {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .main-content {
+    padding-bottom: 56px; /* for bottom nav */
+  }
+  .dashboard-header, .reserve-header {
+    padding: 0 8px;
+  }
+  .logo-img {
+    height: 32px;
+  }
+}
+.scan-header-left img,
+.reserve-header-left img {
+    height:32px;
+    width:auto;
+    vertical-align:middle;
+    margin-right:8px;
 }
