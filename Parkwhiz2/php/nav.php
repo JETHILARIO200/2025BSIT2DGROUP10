@@ -15,6 +15,7 @@
     <a href="/Parkwhiz2/index.php#how">How It Works</a>
     <a href="/Parkwhiz2/php/pricing.php">Pricing</a>
     <a href="/Parkwhiz2/php/contact.php">Contact</a>
+    
     </div>
     <div class="navbar-section right auth">
     <a href="/Parkwhiz2/php/login.php"><button>Login</button></a>
@@ -31,7 +32,7 @@
     <a href="/Parkwhiz2/php/contact.php" onclick="closeDrawer()">Contact</a>
     <a href="/Parkwhiz2/php/login.php" onclick="closeDrawer()">Login</a>
 </div>
-<nav class="bottom-nav">
+
   <a href="#"><i class="fa fa-home"></i></a>
   <a href="#"><i class="fa fa-car"></i></a>
   <a href="#"><i class="fa fa-user"></i></a>
